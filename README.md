@@ -59,7 +59,7 @@ Steps for PWA:
    - PWA functionality was added to make the app more versatile, especially for use cases where internet access might be limited. 
    - The app can be added to a mobile device's home screen for quick access.
    - The service worker ensures the app works offline by caching static assets and data on the first load.
-   - I referred to [this guide](https://tudip.com/blog-post/how-to-turn-a-website-or-web-application-into-pwa-with-example/) for assistance in implementing PWA features like the service worker and manifest file setup.
+   - REFERENCE: I referred to [this guide](https://tudip.com/blog-post/how-to-turn-a-website-or-web-application-into-pwa-with-example/) for assistance in implementing PWA features like the service worker and manifest file setup.
 
 ---
 
