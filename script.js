@@ -31,42 +31,44 @@
         function displayTable() {
             const body = document.querySelector("#chemical-table tbody");
             body.innerHTML = '';
-
+        
             records.forEach((entry, idx) => {
                 const row = document.createElement("tr");
-
+        
                 // Add 'selected' class to the row if it is highlighted
                 if (highlightedRows.includes(idx)) {
                     row.classList.add("selected");
                 }    
-
-                // Create a cell for the checkbox
+        
+                // Create a cell for the Font Awesome icon
                 const checkBoxCell = document.createElement("td");
-                checkBoxCell.innerHTML = `<i class="far ${highlightedRows.includes(idx) ? 'fa-check-square blue-tick' : 'fa-square'}" onclick="highlightRow(${idx})"></i>`;
+                checkBoxCell.innerHTML = `
+                    <i class="far ${highlightedRows.includes(idx) ? 'fa-check-square blue-tick' : 'fa-square'}" 
+                       onclick="highlightRow(${idx})" style="cursor: pointer;"></i>`;
                 row.appendChild(checkBoxCell);
-
+        
                 // Create cells for the rest of the data
                 Object.keys(entry).forEach(prop => {
                     const cell = document.createElement("td");
-
+        
                     if (prop === 'density' || prop === 'viscosity' || prop === 'quantity') {
-                        // I'm seperately wrapping these in boxes
+                        // Wrap these values in their respective boxes
                         cell.innerHTML = `<div class="${prop}-box" contenteditable="true">${entry[prop]}</div>`;
-
                     } else {
                         // Make other cells editable
                         cell.contentEditable = true;
                         cell.textContent = entry[prop];
                     }
-
+        
                     // Update the cell's content when it loses focus
                     cell.addEventListener("blur", (event) => updateCell(event, idx, prop));
                     row.appendChild(cell);
                 });
-
+        
                 body.appendChild(row);
             });
         }
+        
         
         
         
@@ -239,21 +241,27 @@
 
         // This function highlights or unhighlights a row when I click on it.
         function highlightRow(idx) {
-            const tickIcon = document.querySelectorAll("i")[idx]; // Select the Font Awesome icon
+            // Get the icon element that corresponds to the row
+            const tickIcon = document.querySelectorAll("#chemical-table tbody td i")[idx];
             const row = tickIcon.closest('tr');
         
-            if (tickIcon.classList.contains('fa-square')) {
-                tickIcon.classList.remove('fa-square');
-                tickIcon.classList.add('fa-check-square', 'blue-tick');
-                highlightedRows.push(idx);
-                row.classList.add('selected');
-            } else {
+            // Toggle highlighting
+            if (highlightedRows.includes(idx)) {
+                highlightedRows = highlightedRows.filter(i => i !== idx);
                 tickIcon.classList.remove('fa-check-square', 'blue-tick');
                 tickIcon.classList.add('fa-square');
-                highlightedRows = highlightedRows.filter(i => i !== idx);
                 row.classList.remove('selected');
+            } else {
+                highlightedRows.push(idx);
+                tickIcon.classList.remove('fa-square');
+                tickIcon.classList.add('fa-check-square', 'blue-tick');
+                row.classList.add('selected');
             }
+        
+            console.log("Highlighted Rows:", highlightedRows); // Debugging
+            displayTable(); // Refresh the table display
         }
+        
         
         
         
