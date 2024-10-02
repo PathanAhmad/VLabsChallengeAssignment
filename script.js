@@ -50,9 +50,9 @@ const chemAttrMap = {
     3: 'vendor',  
     4: 'density',  
     5: 'viscosity',  
-    6: 'packageType',  
-    7: 'packageSize',  
-    8: 'unitType',  
+    6: 'packaging',  
+    7: 'packSize',  
+    8: 'unit',  
     9: 'quantity'  
 };  
 
