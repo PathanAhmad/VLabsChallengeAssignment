@@ -144,7 +144,6 @@
 
             records.forEach((entry, idx) => {
             const row = document.createElement("tr");
-            // This is where I check if the row is selected to highlight it.
             if (selectedChemicalRows.includes(idx)) {
                     row.classList.add("selected");
             }
@@ -157,7 +156,6 @@
 
             Object.keys(entry).forEach(prop => {
                 const cell = document.createElement("td");
-                // This is where I make the properties editable.
                 if (prop === 'density' || prop === 'viscosity' || prop === 'quantity') {
                     cell.innerHTML = `<div class="${prop}-box" contenteditable="true">${entry[prop]}</div>`;
                 } else {
@@ -173,7 +171,7 @@
         }
     /*
     Explanation:
-    I designed this function to show the chemical records in a table format. It first clear the body of the table to make sure we start fresh. Then, for each record, I create a new row. I check if the row should be highlighted based on user selection. It took me some time to figure out the event listeners, but it turned out to be useful.
+    I designed this function to show the chemical records in a table format. It first clear the body of the table.Then, for each record, I create a new row. I check if the row should be highlighted based on user selection. It took me some time to figure out the event listeners, but it turned out to be useful.
     */
 
 
@@ -182,7 +180,6 @@
             const tickIcon = document.querySelectorAll("#chemical-table tbody td i")[idx];
                 const row = tickIcon.closest('tr');
 
-                // This is where I check if the row is already selected to either add or remove it from the selection.
                 if (selectedChemicalRows.includes(idx)) {
                     selectedChemicalRows = selectedChemicalRows.filter(i => i !== idx);
                     tickIcon.classList.remove('blue-tick');
@@ -201,7 +198,7 @@
     
     /*
     Explanation:
-    It first checks if the row is already selected or not. If it is, I remove it from the selection and update the visual indicators. If not, I add it to the selection. This logic was kinda tricky to get right.
+    It first checks if the row is already selected or not. If it is, I remove it from the selection and update the visual indicators If not, I add it to the selection. 
     */
 
 
@@ -223,7 +220,7 @@
             if (canMove) {
                 for (let i = 0; i < selectedChemicalRows.length; i++) {
                     const index = selectedChemicalRows[i];
-                    // This is where I swap the records
+
                     [records[index], records[index - 1]] = [records[index - 1], records[index]];
                     selectedChemicalRows[i] -= 1;
                 }
@@ -286,7 +283,7 @@
                     if (isNumericA) valueA = parseFloat(valueA);
                     if (isNumericB) valueB = parseFloat(valueB);
 
-                    // THis is where I compare values based on their types and sorting order. I was forced to learn about localeCompare here : ) 
+                    // THis is where I was forced to learn about localeCompare T_T (Wasted too much time with bugs) 
                     if (isNumericA && isNumericB) {
                         return isAscending ? valueA - valueB : valueB - valueA;
                     } else {
@@ -301,7 +298,8 @@
         });
     /*
     Explanation and Source:
-    I first determine which column was clicked and check if it's valid. Then, I toggle the sort order if the same column is clicked again. The sorting logic handles both numeric and string values. Finally, refressshhh! (Problematic logic to speedrun through in 2 days, tbh, but it works now and I'm happy!)
+    I first determine which column was clicked and check if it's valid. Then, I toggle the sort order if the same column is clicked again. The sorting logic handles both numeric and string values. Finally, refressshhh! (Problematic logic to speedrun through in 2 days, tbh, but it works now and I'm happy!) 
+    This logic was kinda tricky to get right, ngl
     This time, I'll give due credit to a discussion on StackOverflow: https://stackoverflow.com/questions/979256/sorting-an-array-of-objects-by-property-values.
     */
 
