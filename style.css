@@ -8,7 +8,7 @@ table {
 thead th {
     cursor: pointer;
     vertical-align: top;
-    height: 75px;
+    height: 65px;
     background-color: #FAFAF5 !important;
     border: none;
     font-weight: normal;
@@ -44,8 +44,6 @@ tbody td:nth-child(7) {
     height: 100%; 
     margin: 0.5px auto;
 }
-
-
 
 
 tbody tr:hover {
