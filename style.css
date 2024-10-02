@@ -36,14 +36,14 @@ tbody td:nth-child(4) {
 
 .density-box, .viscosity-box, .quantity-box {
     border: 1px solid #DBDBD1;
-    display: inline-block;
-    padding: 3px 7px; 
+    display: flex; 
+    justify-content: center; 
+    align-items: center; 
     width: calc(100% - 5px); 
-    text-align: center;
     height: 100%; 
-    line-height: 45px; 
     margin: 0.5px auto;
 }
+
 
 
 tbody tr:hover {
