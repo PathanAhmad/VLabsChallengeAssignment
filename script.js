@@ -40,21 +40,24 @@
  *  
  */  
 
+
 let recs = [];  
 let selChemRows = [];  
 let sortSt = { colIdx: null, asc: true };  
 const chemAttrMap = {  
     1: 'id',  
-    2: 'chemName',  
-    3: 'vend',  
-    4: 'dens',  
-    5: 'visc',  
-    6: 'pkg',  
-    7: 'pkSize',  
-    8: 'unit',  
-    9: 'qty'  
+    2: 'chemicalName',  
+    3: 'vendor',  
+    4: 'density',  
+    5: 'viscosity',  
+    6: 'packageType',  
+    7: 'packageSize',  
+    8: 'unitType',  
+    9: 'quantity'  
 };  
 
+
+// 1. Data Management
 
 async function loadChemData() {  
     try {  
@@ -68,27 +71,27 @@ async function loadChemData() {
 }  
 /*
 Explanation:
-This function fetches chemical data from the specified JSON file. If it fails, it alerts the user and logs the error status to the console.  
-*/  
+This function is responsible for loading chemical data from a JSON file. I use the `fetch` API to get the data, and I check if the response is okay. If it is, I store the records and call `showChemRecs()` to display them. If there's an error, I alert the user to check the console for details.
+*/
 
 function addNewChem() {  
     recs.push({  
         id: recs.length + 1,  
-        chemName: "Unnamed Chem",  
-        vend: "Unknown Vend",  
-        dens: "Unknown",  
-        visc: "Unknown",  
-        pkg: "Unknown",  
-        pkSize: 0,  
-        unit: "Unknown",  
-        qty: 0  
+        chemicalName: "Unnamed Chem",  
+        vendor: "Unknown Vend",  
+        density: "Unknown",  
+        viscosity: "Unknown",  
+        packageType: "Unknown",  
+        packageSize: 0,  
+        unitType: "Unknown",  
+        quantity: 0  
     });  
     showChemRecs();  
 }  
 /*
 Explanation:
-This function adds a new chemical record with default values to the list and updates the display to show the new entry.  
-*/  
+Here, I create a new chemical entry with default values and push it into the `recs` array. The `id` is assigned based on the current length of the array plus one. After adding the new entry, I call `showChemRecs()` to refresh the table display.
+*/
 
 function remChem() {  
     if (selChemRows.length > 0) {  
@@ -102,16 +105,12 @@ function remChem() {
 }  
 /*
 Explanation:
-This function removes the selected chemical rows from the list. If no rows are selected, it alerts the user to select at least one row.  
-*/  
+In this function, I check if there are any selected rows. If there are, I sort them in descending order to avoid index shifting issues and remove them from the `recs` array. Finally, I clear the selection and update the displayed records.
+*/
 
 function reloadChemRec() {  
     loadChemData();  
 }  
-/*
-Explanation:
-This function simply calls loadChemData to reload the chemical records from the JSON file.  
-*/  
 
 function saveRecs() {  
     console.log("Saving recs:", JSON.stringify(recs, null, 2));  
@@ -119,8 +118,10 @@ function saveRecs() {
 }  
 /*
 Explanation:
-This function saves the current records to the console in a formatted JSON string and alerts the user that the data has been saved.  
-*/  
+I save the records to the console since I can’t change the JSON file directly without using a framework or I'm too inexperienced for this. I'll look into if it's possible and will push this update to the repo if it is. 
+*/ 
+
+// 2. Table Display and Interaction
 
 function showChemRecs() {  
     const body = document.querySelector("#chemical-table tbody");  
@@ -139,7 +140,7 @@ function showChemRecs() {
 
         Object.keys(ent).forEach(prop => {  
             const cell = document.createElement("td");  
-            if (prop === 'dens' || prop === 'visc' || prop === 'qty') {  
+            if (prop === 'density' || prop === 'viscosity' || prop === 'quantity') {  
                 cell.innerHTML = `<div class="${prop}-box" contenteditable="true">${ent[prop]}</div>`;  
             } else {  
                 cell.contentEditable = true;  
@@ -154,7 +155,7 @@ function showChemRecs() {
 }  
 /*
 Explanation:
-This function displays the chemical records in the table by creating rows and cells for each record and setting up event listeners for editing. It also highlights selected rows based on user selection.  
+I designed this function to show the chemical records in a table format. It first clears the body of the table. Then, for each record, I create a new row. I check if the row should be highlighted based on user selection. It took me some time to figure out the event listeners, but it turned out to be useful.  
 */  
 
 function selChemRow(idx) {  
@@ -178,8 +179,10 @@ function selChemRow(idx) {
 }  
 /*
 Explanation:
-This function highlights or unhighlights a chemical row based on user selection and updates the visual indicators accordingly.  
+It first checks if the row is already selected or not. If it is, I remove it from the selection and update the visual indicators. If not, I add it to the selection. This shouldn't be too complicated, but an explanation was in order since the function looks fat.  
 */  
+
+// 3. Row Manipulation
 
 function moveChemUp() {  
     selChemRows.sort((a, b) => b - a);  
@@ -197,7 +200,7 @@ function moveChemUp() {
 }  
 /*
 Explanation:
-This function moves the selected chemical records up in the table by swapping their positions. It checks if the selected rows can be moved without going out of bounds.  
+I first check if the rows can move without going out of bounds. I sorted the selected rows in descending order so when I swap them, I don't mess up the remaining indices.  
 */  
 
 function moveChemDown() {  
@@ -215,8 +218,10 @@ function moveChemDown() {
 }  
 /*
 Explanation:
-This function moves the selected chemical records down in the table. It checks if the last selected row can move down and then swaps their positions accordingly.  
+This is sort of similar to the previous function, just a slight difference. First, I sort the selected rows so that I can handle the highest index first, preventing any out-of-bounds errors. Then, if the last selected row can move down, I swap it with the one below and update its index.  
 */  
+
+// 4. Sorting
 
 document.querySelectorAll('th').forEach(th => {  
     th.addEventListener('click', function () {  
@@ -250,11 +255,7 @@ document.querySelectorAll('th').forEach(th => {
 });  
 /*
 Explanation:
-This section sets up event listeners on table headers for sorting the data based on user clicks. It determines the sorting order (ascending/descending) and sorts the records accordingly.  
+I added a click listener to the headers of the table, and this function handles sorting based on which header is clicked. I also learned about localeCompare to handle string comparisons, which was interesting. 
 */  
 
 loadChemData();  
-/*
-Explanation:
-This line calls the loadChemData function when the script first runs to populate the table with chemical records.  
-*/
