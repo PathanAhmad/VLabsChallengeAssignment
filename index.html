@@ -5,9 +5,12 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Chemical Supplies</title>
 
+
     <link rel="stylesheet" href="style.css">
     <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" rel="stylesheet">
     <link href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.3.3/css/bootstrap.min.css" rel="stylesheet">
+
+    <link rel="manifest" href="manifest.json"> // I'm trying to do the PWA part of the assignment for extra scores
 
 </head>
 
@@ -60,6 +63,20 @@
     <!-- Bootstrap dependency and my scripts file -->
     <script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.3.3/js/bootstrap.bundle.min.js"></script>
     <script src="script.js"></script>
+
+    <script>
+        if ('serviceWorker' in navigator) {
+          window.addEventListener('load', () => {
+            navigator.serviceWorker.register('service-worker.js')
+              .then((registration) => {
+                console.log('Service Worker registered with scope:', registration.scope);
+              })
+              .catch((error) => {
+                console.log('Service Worker registration failed:', error);
+              });
+          });
+        }
+    </script>
 
 </body>
 </html>
