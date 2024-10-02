@@ -33,7 +33,6 @@ tbody td:nth-child(4) {
 }
 
 
-
 .density-box, .viscosity-box, .quantity-box {
     border: 1px solid #DBDBD1;
     display: inline-block;
@@ -66,6 +65,10 @@ table tbody tr.selected {
 }
 
 #th-vendor {
+    padding-left: 15px; 
+}
+
+#th-selector {
     padding-left: 15px; 
 }
 
