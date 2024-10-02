@@ -1,75 +1,75 @@
 # Chemical Supplies Management - IIT Bombay Assignment
 
-This project is a simple web-based interface to manage a table of chemical supplies, created as part of an assignment for the Javascript Web Programmer position at IIT Bombay. The application allows users to view, add, remove, sort, and edit chemical records. Additionally, it is implemented as a Progressive Web App (PWA), allowing it to work offline and on multiple devices.
+This project implements a web-based interface for managing chemical supplies, created for the Javascript Web Programmer position at IIT Bombay.
 
----
+The application allows users to view, add, remove, sort, and edit chemical records. The table features sortable columns, editable fields, and row manipulation functionality. Additionally, it is built as a Progressive Web App (PWA) to allow offline use.
 
-## Design Approach
+## Problem Statement
 
-### 1. **HTML and Table Structure:**
+- Build a UI that presents a table of chemicals, with functionalities to sort, edit, and manage rows as per the requirements.
+- The toolbar at the top-left includes the following options:
+  - Add a new row
+  - Move a row up or down
+  - Delete a row
+  - Refresh the table
+  - Save the current table state
+- The table contains 15 rows of chemical data, including:
+  - `id`, `Chemical Name`, `Vendor`, `Density`, `Viscosity`, `Packaging`, `Pack Size`, `Unit`, and `Quantity`.
 
-The main structure of the webpage consists of a **table** that displays a list of chemical records, with sortable columns and editable fields. Each table column represents a property of a chemical (such as Name, Vendor, Density, etc.). Buttons in the top toolbar allow for interaction, including adding new records, moving rows up and down, and removing selected rows.
+## Features Implemented
 
-I used **Bootstrap** for basic styling and responsive layout, while keeping the JavaScript entirely vanilla to comply with the assignment's restrictions of "No frameworks."
+### 1. **Table Structure**
+   - A dynamic table displaying 15 chemical entries with the above properties.
+   - Sort functionality implemented on column headers, toggling between ascending and descending order.
 
-The table supports:
-- Sorting when column headers are clicked.
-- Inline editing of certain fields, like `Density`, `Viscosity`, and `Quantity`, directly in the table.
-- Selection of rows using tick icons to apply batch actions (like deleting or moving rows).
+### 2. **Toolbar Functionalities**
+   - **Add Row**: Adds a new row with an automatically assigned ID.
+   - **Move Row Up/Down**: Moves the selected row up or down.
+   - **Delete Row**: Removes the selected row from the table.
+   - **Refresh Table**: Reloads the data from the initial JSON file.
+   - **Save Data**: Saves the current state of the table locally.
 
-### 2. **Data Management and JavaScript Functionality:**
-
-- **Data Handling:** The data for the chemicals is loaded from a JSON file (`chemicals.json`). This file contains an array of chemical records, which are then dynamically displayed in the table.
-- **Adding Records:** New records can be added through the "Add" button, which automatically assigns an ID to the new entry.
-- **Sorting:** Clicking a table header sorts the rows based on the column, with toggling between ascending and descending orders. The sorting logic can handle both numerical and string-based data.
-- **Row Manipulation:** Rows can be moved up or down within the table based on the user’s selection.
-- **Editing:** Fields such as `Density` and `Viscosity` are editable directly within the table cells using `contenteditable`.
-
-### 3. **Progressive Web App (PWA) Implementation:**
-
-I implemented PWA functionality to make the app available offline and installable on mobile devices.
-
-Steps for PWA:
-- **Service Worker:** A service worker (`service-worker.js`) is registered to enable caching and offline functionality. This file caches the essential resources (HTML, CSS, JS, and the JSON data file) to ensure the app works even without an internet connection.
-  
-- **Manifest File:** A `manifest.json` file was added, which contains metadata about the app, such as the name, icons, and display properties. This file allows the app to be installed on users' home screens like a native app.
-
-#### How It Works as a PWA:
-- Once you open the page, it registers a service worker.
-- The service worker caches files so that if the app is accessed again, it works offline.
-- The manifest file provides instructions to make it installable on devices, with specific icons and names.
-  
----
-
-## Implementation Choices
-
-### 1. **UI Design:**
-   - I chose Bootstrap components for a clean and mobile-responsive design.
-   - Font Awesome icons were used for the buttons to give a modern and visually clear representation of actions like adding, saving, and deleting rows.
+### 3. **Data Handling**
+   - Data is loaded from a local JSON array, `chemicals.json`, containing details for each chemical.
+   - Each chemical includes fields like `id`, `Chemical Name`, `Vendor`, `Density`, `Viscosity`, `Packaging`, `Pack Size`, `Unit`, and `Quantity`.
    
-### 2. **File Structure:**
-   - All external libraries like Bootstrap and Font Awesome are loaded via CDN to keep the project lightweight.
-   - JSON data is stored locally in `chemicals.json`, with an async function to load the records.
-   
-### 3. **Sorting & Editing:**
-   - Sorting is handled using vanilla JavaScript event listeners on the table headers. I used the `.localeCompare()` function for string sorting and `parseFloat()` for numerical comparisons.
-   - Editing functionality is applied directly within the table cells, making it intuitive for users to modify chemical properties in place.
-   
-### 4. **Progressive Web App:**
-   - PWA functionality was added to make the app more versatile, especially for use cases where internet access might be limited. 
-   - The app can be added to a mobile device's home screen for quick access.
-   - The service worker ensures the app works offline by caching static assets and data on the first load.
-   - REFERENCE: I referred to [this guide](https://tudip.com/blog-post/how-to-turn-a-website-or-web-application-into-pwa-with-example/) for assistance in implementing PWA features like the service worker and manifest file setup.
+### 4. **Sorting**
+   - Clickable column headers allow sorting of rows based on the selected column, with toggling for ascending and descending order.
+   - String sorting is handled using `.localeCompare()`, and numerical fields are sorted using `parseFloat()`.
 
----
+### 5. **Editing**
+   - Editing is done via inline `contenteditable` fields for properties like `Density`, `Viscosity`, and `Quantity`. This ensures a user-friendly interface.
+
+### 6. **Progressive Web App (PWA)**
+   - **Offline Access**: The app registers a service worker to cache essential resources, ensuring it works without an internet connection.
+   - **Installable**: A `manifest.json` is included to make the app installable on mobile devices.
+   - **Cross-Device Compatibility**: The app is responsive and works well on mobile, tablet, and desktop.
+
+## Project Structure
+
+- **HTML**: The main structure of the page.
+- **CSS**: Custom styling, with Bootstrap for responsiveness.
+- **JavaScript**: Handles table functionalities like sorting, adding, deleting, and saving rows.
+- **JSON**: Stores the initial list of chemical data.
+
+## Design Choices
+
+- **No Frameworks**: Only vanilla JavaScript, HTML, and CSS were used, in compliance with the assignment's requirements.
+- **Local Libraries**: All external libraries like Bootstrap and FontAwesome are stored locally in the repository—no external CDN links.
+- **Small Project Size**: The app’s total size is kept minimal by locally storing all resources and only using essential CSS and JS.
+
+## Deliverables
+
+- Hosted Page: [Link to Hosted Page](#)
+- Public Repo: [Link to GitHub Repository](#)
+
+## Additional Enhancements
+
+- Implemented PWA features for offline access and installability, providing a better user experience across devices.
+- Clear and responsive UI design using Bootstrap, ensuring accessibility on both desktop and mobile devices.
+- Sorting functionality for both numerical and text columns, along with easy inline editing for key fields.
 
 ## Future Improvements
-- **Improved Error Handling:** I could enhance error messaging when loading records or interacting with the app, making it more user-friendly.
-- **Data Persistence:** Currently, data is logged to the console. A future improvement could include saving records to local storage or integrating a backend API for persistent data management.
-- **Enhanced Mobile Experience:** While the app is mobile-responsive, there is room to further optimize the UI for small screens since the assignment is clearly defined and the scale of flexibility with the UI is unclear.
 
----
-
-
-
-
+- **Data Persistence**: Currently, data is saved locally in the browser. Future improvements could include integration with a backend API for persistent storage.
+- **Improved Mobile Experience**: Although responsive, further UI optimizations for small screens could improve user interactions on mobile.
