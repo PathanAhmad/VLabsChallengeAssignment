@@ -38,11 +38,11 @@ tbody td:nth-child(4) {
 .density-box, .viscosity-box, .quantity-box {
     border: 1px solid #DBDBD1;
     display: inline-block;
-    padding: 1px 7px; 
+    padding: 3px 7px; 
     width: calc(100% - 5px); 
     text-align: center;
     /* background-color: #f8f9fa;  */
-    margin: 0px auto;
+    margin: 0.5px auto;
 }
 
 tbody tr:hover {
@@ -82,5 +82,8 @@ table tbody tr.selected {
     color: blue;
 }
 
-
+tbody tr {
+    line-height: 1.5;  
+    height: 50px;      
+}
 
