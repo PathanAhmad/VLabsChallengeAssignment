@@ -38,12 +38,12 @@
                 // Add 'selected' class to the row if it is highlighted
                 if (highlightedRows.includes(idx)) {
                     row.classList.add("selected");
-                }    
+                }
         
-                // Create a cell for the Font Awesome icon
+                // Create a cell for the Font Awesome tick icon
                 const checkBoxCell = document.createElement("td");
                 checkBoxCell.innerHTML = `
-                    <i class="far ${highlightedRows.includes(idx) ? 'fa-check-square blue-tick' : 'fa-square'}" 
+                    <i class="fas fa-check ${highlightedRows.includes(idx) ? 'blue-tick' : 'grey-tick'}"
                        onclick="highlightRow(${idx})" style="cursor: pointer;"></i>`;
                 row.appendChild(checkBoxCell);
         
@@ -241,20 +241,18 @@
 
         // This function highlights or unhighlights a row when I click on it.
         function highlightRow(idx) {
-            // Get the icon element that corresponds to the row
             const tickIcon = document.querySelectorAll("#chemical-table tbody td i")[idx];
             const row = tickIcon.closest('tr');
         
-            // Toggle highlighting
             if (highlightedRows.includes(idx)) {
                 highlightedRows = highlightedRows.filter(i => i !== idx);
-                tickIcon.classList.remove('fa-check-square', 'blue-tick');
-                tickIcon.classList.add('fa-square');
+                tickIcon.classList.remove('blue-tick');
+                tickIcon.classList.add('grey-tick');
                 row.classList.remove('selected');
             } else {
                 highlightedRows.push(idx);
-                tickIcon.classList.remove('fa-square');
-                tickIcon.classList.add('fa-check-square', 'blue-tick');
+                tickIcon.classList.remove('grey-tick');
+                tickIcon.classList.add('blue-tick');
                 row.classList.add('selected');
             }
         

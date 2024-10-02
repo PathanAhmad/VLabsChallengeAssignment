@@ -69,4 +69,13 @@ table tbody tr.selected {
     padding-left: 15px; 
 }
 
+.grey-tick {
+    color: grey;
+}
+
+.blue-tick {
+    color: blue;
+}
+
+
 
