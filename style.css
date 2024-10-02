@@ -40,10 +40,12 @@ tbody td:nth-child(4) {
     display: inline-block;
     padding: 3px 7px; 
     width: calc(100% - 5px); 
+    height: 95%; 
     text-align: center;
-    /* background-color: #f8f9fa;  */
     margin: 0.5px auto;
+    box-sizing: border-box; 
 }
+
 
 tbody tr:hover {
     background-color: #f0f0f0;
