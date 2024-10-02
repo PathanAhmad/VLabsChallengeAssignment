@@ -60,8 +60,8 @@ The application allows users to view, add, remove, sort, and edit chemical recor
 
 ## Deliverables
 
-- Hosted Page: [Link to Hosted Page](#)
-- Public Repo: [Link to GitHub Repository](#)
+- Hosted Page: [Link to Hosted Page](https://pathanahmad.github.io/VLabsChallengeAssignment/)
+- Public Repo: [Link to GitHub Repository](https://github.com/PathanAhmad/VLabsChallengeAssignment)
 
 ## Additional Enhancements
 
