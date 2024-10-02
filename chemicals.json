@@ -6,8 +6,8 @@
       "density": "1.00 g/cm³",
       "viscosity": "60.63 m²/s",
       "packaging": "Bag",
-      "packSize": "100.00 kg",
-      "unit": "Kilograms",
+      "packSize": 100.00,
+      "unit": "Kg",
       "quantity": 6495.18
     },
     {
@@ -17,8 +17,8 @@
       "density": "1.58 g/cm³",
       "viscosity": "48.22 m²/s",
       "packaging": "Bag",
-      "packSize": "100.00 kg",
-      "unit": "Kilograms",
+      "packSize": 100.00,
+      "unit": "Kg",
       "quantity": 8751.90
     },
     {
@@ -28,8 +28,8 @@
       "density": "0.87 g/cm³",
       "viscosity": "12.62 m²/s",
       "packaging": "Barrel",
-      "packSize": "75.00 L",
-      "unit": "Liters",
+      "packSize": 75.00,
+      "unit": "L",
       "quantity": 5964.61
     },
     {
@@ -39,8 +39,8 @@
       "density": "1.50 g/cm³",
       "viscosity": "76.51 m²/s",
       "packaging": "Bag",
-      "packSize": "105.00 kg",
-      "unit": "Kilograms",
+      "packSize": 105.00,
+      "unit": "Kg",
       "quantity": 8183.73
     },
     {
@@ -50,8 +50,8 @@
       "density": "1.40 g/cm³",
       "viscosity": "14.90 m²/s",
       "packaging": "Bag",
-      "packSize": "105.00 kg",
-      "unit": "Kilograms",
+      "packSize": 105.00,
+      "unit": "Kg",
       "quantity": 4154.33
     },
     {
@@ -60,9 +60,9 @@
       "vendor": "Sinopec",
       "density": "0.63 g/cm³",
       "viscosity": "66.76 m²/s",
-      "packaging": "N/A",
-      "packSize": "N/A",
-      "unit": "N/A",
+      "packaging": "Unknown",
+      "packSize": "Unknown",
+      "unit": "Unknown",
       "quantity": 6272.34
     },
     {
@@ -72,8 +72,8 @@
       "density": "0.92 g/cm³",
       "viscosity": "72.12 m²/s",
       "packaging": "Bag",
-      "packSize": "250.00 kg",
-      "unit": "Kilograms",
+      "packSize": 250.00,
+      "unit": "Kg",
       "quantity": 8749.54
     },
     {
@@ -83,8 +83,8 @@
       "density": "0.92 g/cm³",
       "viscosity": "0.47 m²/s",
       "packaging": "Container",
-      "packSize": "60 L",
-      "unit": "Liters",
+      "packSize": 60,
+      "unit": "L",
       "quantity": 3525.92
     },
     {
@@ -94,8 +94,8 @@
       "density": "1.05 g/cm³",
       "viscosity": "0.75 m²/s",
       "packaging": "Bottle",
-      "packSize": "1 L",
-      "unit": "Liters",
+      "packSize": 1,
+      "unit": "L",
       "quantity": 3172.15
     },
     {
@@ -105,8 +105,8 @@
       "density": "0.85 g/cm³",
       "viscosity": "0.32 m²/s",
       "packaging": "Drum",
-      "packSize": "80 L",
-      "unit": "Liters",
+      "packSize": 80,
+      "unit": "L",
       "quantity": 8435.37
     },
     {
@@ -116,8 +116,8 @@
       "density": "1.15 g/cm³",
       "viscosity": "1.1 m²/s",
       "packaging": "Barrel",
-      "packSize": "100 L",
-      "unit": "Liters",
+      "packSize": 100,
+      "unit": "L",
       "quantity": 1597.65
     },
     {
@@ -127,8 +127,8 @@
       "density": "0.99 g/cm³",
       "viscosity": "0.60 m²/s",
       "packaging": "Cylinder",
-      "packSize": "50 L",
-      "unit": "Liters",
+      "packSize": 50,
+      "unit": "L",
       "quantity": 364.84
     },
     {
@@ -138,8 +138,8 @@
       "density": "1.20 g/cm³",
       "viscosity": "0.88 m²/s",
       "packaging": "Sack",
-      "packSize": "20 Kg",
-      "unit": "Kilograms",
+      "packSize": 20,
+      "unit": "Kg",
       "quantity": 4535.26
     },
     {
@@ -149,8 +149,8 @@
       "density": "2.00 g/cm³",
       "viscosity": "0.45 m²/s",
       "packaging": "Bag",
-      "packSize": "25 Kg",
-      "unit": "Kilograms",
+      "packSize": 25,
+      "unit": "Kg",
       "quantity": 6495.18
     },
     {
@@ -160,8 +160,8 @@
       "density": "1.30 g/cm³",
       "viscosity": "0.80 m²/s",
       "packaging": "Sack",
-      "packSize": "5 Kg",
-      "unit": "Kilograms",
+      "packSize": 5,
+      "unit": "Kg",
       "quantity": 7000.00
     }
   ]

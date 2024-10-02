@@ -116,7 +116,7 @@
                 density: "Unknown", // Default density.
                 viscosity: "Unknown", // Default viscosity.
                 packaging: "Unknown", // Default packaging type.
-                packSize: "Unknown", // Default pack size.
+                packSize: 0, // Default pack size.
                 unit: "Unknown", // Default unit of measurement.
                 quantity: 0 // Start with a quantity of 0.
             });
