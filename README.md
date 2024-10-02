@@ -1,6 +1,6 @@
 # Chemical Supplies Management - IIT Bombay Assignment
 
-This project implements a web-based interface for managing chemical supplies, created for the Javascript Web Programmer position at IIT Bombay.
+This project implements a web-based interface for managing chemical supplies, created for the task for Javascript Web Programmer position at IIT Bombay.
 
 The application allows users to view, add, remove, sort, and edit chemical records. The table features sortable columns, editable fields, and row manipulation functionality. Additionally, it is built as a Progressive Web App (PWA) to allow offline use.
 
@@ -38,12 +38,12 @@ The application allows users to view, add, remove, sort, and edit chemical recor
    - String sorting is handled using `.localeCompare()`, and numerical fields are sorted using `parseFloat()`.
 
 ### 5. **Editing**
-   - Editing is done via inline `contenteditable` fields for properties like `Density`, `Viscosity`, and `Quantity`. This ensures a user-friendly interface.
+   - Editing is done via inline `contenteditable` fields for properties like `Density`, `Viscosity`, and `Quantity`. This ensures a user-friendly interface instead of random buttons that would force a deviation from the image shared in the project requirement.
 
 ### 6. **Progressive Web App (PWA)**
    - **Offline Access**: The app registers a service worker to cache essential resources, ensuring it works without an internet connection.
    - **Installable**: A `manifest.json` is included to make the app installable on mobile devices.
-   - **Cross-Device Compatibility**: The app is responsive and works well on mobile, tablet, and desktop.
+   - **Cross-Device Compatibility**: The app is responsive and works well on mobile, tablet, and desktop, though the structure and requirement of the project itself makes it non-ideal for mobile devices.
 
 ## Project Structure
 
@@ -72,4 +72,5 @@ The application allows users to view, add, remove, sort, and edit chemical recor
 ## Future Improvements
 
 - **Data Persistence**: Currently, data is saved locally in the browser. Future improvements could include integration with a backend API for persistent storage.
-- **Improved Mobile Experience**: Although responsive, further UI optimizations for small screens could improve user interactions on mobile.
+- **Improved Mobile Experience**: Although responsive, further UI optimizations for small screens could improve user interactions on mobile. But as of right now and given the specific project requirements and the nature of the software itself, the room for improving compatibility for phones/mobile devices is quite small in my humble, inexperienced opinion.
+- **Logo Matching**: If I could find logos that were closer to the design requirement, I could match them as well, but I'm out of time.
