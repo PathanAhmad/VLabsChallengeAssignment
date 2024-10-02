@@ -29,7 +29,8 @@ tbody td:nth-child(3) {
 }
 
 tbody td:nth-child(1), 
-tbody td:nth-child(4) {
+tbody td:nth-child(4),
+tbody td:nth-child(7) {
     padding-left: 15px; 
 }
 
