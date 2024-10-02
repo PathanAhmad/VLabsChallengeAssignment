@@ -21,7 +21,7 @@ thead th {
 
 tbody td {
     border: none; 
-    height: 50px;
+    height: 45px;
 }
 
 tbody td:nth-child(3) {
@@ -40,7 +40,8 @@ tbody td:nth-child(4) {
     padding: 3px 7px; 
     width: calc(100% - 5px); 
     text-align: center;
-    height: 100%; /* Allow boxes to take full height of the cell */
+    height: 100%; 
+    line-height: 45px; 
     margin: 0.5px auto;
 }
 
