@@ -64,7 +64,7 @@
 
 
   //////////////////////
- //1. Data Management/////////////////////////////////////////////////
+ //1. Data Management///////////////////////////////////////////////////////////////////////////////
 //////////////////////
 
 
@@ -79,10 +79,6 @@
                 alert('Failed to load recs. Check console.');  
             }  
         }  
-        /*
-        Explanation:
-        This function is responsible for loading chemical data from a JSON file. I use the `fetch` API to get the data, and I check if the response is okay. If it is, I store the records and call `showChemRecs()` to display them. If there's an error, I alert the user to check the console for details.
-        */
 
 
 
@@ -100,10 +96,6 @@
             });  
             showChemRecs();  
         }  
-        /*
-        Explanation:
-        Here, I create a new chemical entry with default values and push it into the `recs` array. The `id` is assigned based on the current length of the array plus one. After adding the new entry, I call `showChemRecs()` to refresh the table display.
-        */
 
 
 
@@ -117,10 +109,6 @@
                 alert("Select at least 1 row.");  
             }  
         }  
-        /*
-        Explanation:
-        In this function, I check if there are any selected rows. If there are, I sort them in descending order to avoid index shifting issues and remove them from the `recs` array. Finally, I clear the selection and update the displayed records.
-        */
 
 
 
@@ -146,7 +134,7 @@
 
 
   ////////////////////////////////////
- //2. Table Display and Interaction////////////////////////////////////
+ //2. Table Display and Interaction/////////////////////////////////////////////////////////////////////////
 ////////////////////////////////////
 
 
@@ -183,8 +171,8 @@
         }  
         /*
         Explanation:
-        I designed this function to show the chemical records in a table format. It first clears the body of the table. Then, for each record, I create a new row. I check if the row should be highlighted based on user selection. It took me some time to figure out the event listeners, but it turned out to be useful.  
-        */  
+        This function, I made, to show the chemical records in a table format. It first clears the body of the table. Then, for each record, I create a new row. I check if the row should be highlighted based on user selection. It took me some time to figure out the event listeners logic, but it turned out to be useful.  
+        */ 
 
 
 
@@ -207,10 +195,6 @@
             console.log("Highlighted Rows:", selChemRows);  
             showChemRecs();  
         }  
-        /*
-        Explanation:
-        It first checks if the row is already selected or not. If it is, I remove it from the selection and update the visual indicators. If not, I add it to the selection. This shouldn't be too complicated, but an explanation was in order since the function looks fat.  
-        */  
 
 
 
@@ -219,7 +203,7 @@
 
 
   ///////////////////////
- //3. Row Manipulation////////////////////////////////////////////
+ //3. Row Manipulation/////////////////////////////////////////////////////////////////////////////////
 ///////////////////////
 
 
@@ -260,7 +244,7 @@
         }  
         /*
         Explanation:
-        This is sort of similar to the previous function, just a slight difference. First, I sort the selected rows so that I can handle the highest index first, preventing any out-of-bounds errors. Then, if the last selected row can move down, I swap it with the one below and update its index.  
+        The logic here is sort of similar to the previous function, just minor differences. 
         */  
 
 
@@ -270,7 +254,7 @@
 
 
   //////////////
- //4. Sorting//////////////////////////////////////////////////////
+ //4. Sorting///////////////////////////////////////////////////////////////////////////////////
 //////////////
 
 
