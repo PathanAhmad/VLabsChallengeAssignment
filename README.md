@@ -66,7 +66,7 @@ Steps for PWA:
 ## Future Improvements
 - **Improved Error Handling:** I could enhance error messaging when loading records or interacting with the app, making it more user-friendly.
 - **Data Persistence:** Currently, data is logged to the console. A future improvement could include saving records to local storage or integrating a backend API for persistent data management.
-- **Enhanced Mobile Experience:** While the app is mobile-responsive, there is room to further optimize the UI for small screens.
+- **Enhanced Mobile Experience:** While the app is mobile-responsive, there is room to further optimize the UI for small screens since the assignment is clearly defined and the scale of flexibility with the UI is unclear.
 
 ---
 
