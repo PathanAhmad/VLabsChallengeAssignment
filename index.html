@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Chemical Supplies</title>
+
+    <link rel="stylesheet" href="style.css">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" rel="stylesheet">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.3.3/css/bootstrap.min.css" rel="stylesheet">
+
+</head>
+
+<body>
+
+    <div class="container mt-5">
+        <div class="d-flex justify-content-between align-items-center mb-2">
+
+            <h2 class="mb-0">
+                Chemical Supplies
+            </h2>
+
+            <div>
+                <button class="btn btn-primary"   onclick="addNewChemical()"      ><i class="fas fa-plus"        ></i></button>
+                <button class="btn btn-secondary" onclick="moveChemicalDown()"    ><i class="fas fa-arrow-down"  ></i></button>
+                <button class="btn btn-secondary" onclick="moveChemicalUp()"      ><i class="fas fa-arrow-up"    ></i></button>
+                <button class="btn btn-danger"    onclick="removeChemical()"      ><i class="fas fa-trash"       ></i></button>
+                <button class="btn btn-primary"   onclick="reloadChemicalRecord()"><i class="fas fa-rotate-right"></i></button>
+                <button class="btn btn-success"   onclick="saveRecords()"         ><i class="fas fa-save"        ></i></button>
+            </div>
+
+        </div>
+
+        <div class="table-responsive">
+            <table id="chemical-table" style="width: 100%;">
+
+                <thead class="thead-light">
+                    <tr>
+                        <th></th>
+                        <th id="th-index"     data-order="desc">                        <br><br></th>
+                        <th id="th-name"      data-order="desc"> Chemical Name          <br><br></th>
+                        <th id="th-vendor"    data-order="desc"> Vendor                 <br><br></th>
+                        <th id="th-density"   data-order="desc"> Density   <br><br>         <span style="font-weight: lighter; color: #888;"> (g/cm³) </span>   <br></th>
+                        <th id="th-viscosity" data-order="desc"> Viscosity <br><br>         <span style="font-weight: lighter; color: #888;"> (m²/s)  </span>   <br></i></th>
+                        <th id="th-packaging" data-order="desc"> Packaging              <br><br></th>
+                        <th id="th-packSize"  data-order="desc"> Pack Size                                                 </th>
+                        <th id="th-unit"      data-order="desc"> Unit                   <br><br></th>
+                        <th id="th-quantity"  data-order="desc"> Quantity               <br><br></th>
+                    </tr>
+                </thead>
+
+                <tbody>
+                    <!-- Check Explanation under "DisplayTable()" to understand why I have left this empty and how I will inject chemical rows here. -->
+                </tbody>
+
+            </table>
+        </div>
+    </div>
+
+    <!-- Bootstrap dependency and my scripts file -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.3.3/js/bootstrap.bundle.min.js"></script>
+    <script src="script.js"></script>
+
+</body>
+</html>

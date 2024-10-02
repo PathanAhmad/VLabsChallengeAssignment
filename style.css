@@ -1,0 +1,83 @@
+
+table {
+    border-collapse: collapse;
+    width: 100%;
+    border: 2px solid #E2E2DA;
+}
+
+thead th {
+    cursor: pointer;
+    vertical-align: top;
+    height: 75px;
+    background-color: #FAFAF5 !important;
+    border: none;
+    font-weight: normal;
+    /* text-align: center; */
+}
+
+#th-name {
+    border-right: 2px solid #dee2e6; 
+}
+
+tbody td {
+    border: none; 
+}
+
+tbody td:nth-child(3) {
+    border-right: 2px solid #dee2e6; 
+}
+
+tbody td:nth-child(1), 
+tbody td:nth-child(4) {
+    padding-left: 15px; 
+}
+
+
+
+.density-box, .viscosity-box, .quantity-box {
+    border: 1px solid #DBDBD1;
+    display: inline-block;
+    padding: 3px 7px; 
+    width: calc(100% - 5px); 
+    text-align: center;
+    /* background-color: #f8f9fa;  */
+    margin: 0.5px auto;
+}
+
+input[type="checkbox"] {
+    width: 16px;
+    height: 16px;
+    cursor: pointer;
+    accent-color: grey; 
+}
+
+input[type="checkbox"]:checked {
+    accent-color: blue; 
+}
+
+tbody tr:hover {
+    background-color: #f0f0f0;
+}
+
+
+.selected {
+    background-color: #E6E8FF !important; 
+}
+
+.table-hover tbody tr:hover {
+    background-color: inherit !important; 
+}
+
+tbody tr.selected {
+    background-color: #E6E8FF !important;
+}
+
+table tbody tr.selected {
+    background-color: #E6E8FF !important;
+}
+
+#th-vendor {
+    padding-left: 15px; 
+}
+
+
