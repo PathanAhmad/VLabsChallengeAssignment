@@ -5,7 +5,7 @@
  *    - records: Stores chemical records.
  *    - selectedChemicalRows: Tracks which rows are highlighted.
  *    - sortState: Tracks current sorting setup.
- *    - columnMapping: Maps column numbers to their corresponding names.
+ *    - chemicalAttributeMapping: Maps column numbers to their corresponding names.
  *
  * 
  * 
@@ -40,7 +40,7 @@
 let records = [];
 let selectedChemicalRows = [];
 let sortState = { columnIndex: null, isAscending: true };
-const columnMapping = {
+const chemicalAttributeMapping = {
     1: 'id',
     2: 'chemicalName',
     3: 'vendor',
@@ -241,7 +241,7 @@ function moveChemicalDown() {
 document.querySelectorAll('th').forEach(th => {
     th.addEventListener('click', function () {
         const columnIndex = Array.from(th.parentNode.children).indexOf(th);
-        const columnKey = columnMapping[columnIndex];
+        const columnKey = chemicalAttributeMapping[columnIndex];
         if (!columnKey) return;
 
         const isAscending = sortState.columnIndex === columnIndex ? !sortState.isAscending : true;
