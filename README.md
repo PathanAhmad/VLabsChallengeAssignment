@@ -44,6 +44,7 @@ The application allows users to view, add, remove, sort, and edit chemical recor
    - **Offline Access**: The app registers a service worker to cache essential resources, ensuring it works without an internet connection.
    - **Installable**: A `manifest.json` is included to make the app installable on mobile devices.
    - **Cross-Device Compatibility**: The app is responsive and works well on mobile, tablet, and desktop, though the structure and requirement of the project itself makes it non-ideal for mobile devices.
+   - **Reference**: I used this site to learn about PWA implementation: https://tudip.com/blog-post/how-to-turn-a-website-or-web-application-into-pwa-with-example/
 
 ## Project Structure
 
@@ -61,7 +62,6 @@ The application allows users to view, add, remove, sort, and edit chemical recor
 ## Deliverables
 
 - Hosted Page: [Link to Hosted Page](https://pathanahmad.github.io/VLabsChallengeAssignment/)
-- Public Repo: [Link to GitHub Repository](https://github.com/PathanAhmad/VLabsChallengeAssignment)
 
 ## Additional Enhancements
 
