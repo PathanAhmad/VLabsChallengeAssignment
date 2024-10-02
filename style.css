@@ -38,7 +38,7 @@ tbody td:nth-child(4) {
 .density-box, .viscosity-box, .quantity-box {
     border: 1px solid #DBDBD1;
     display: block; 
-    padding: 1px 3px;  
+    padding: 7px 9px;  
     width: calc(100% - 10px); 
     height: calc(100% - 5px); 
     text-align: center;
