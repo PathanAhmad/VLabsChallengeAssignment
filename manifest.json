@@ -21,12 +21,12 @@
     "screenshots": [
         {
             "src": "icons/screenshot-wide.png",
-            "sizes": "wide",
+            "sizes": "1147x661",
             "type": "image/png"
         },
         {
             "src": "icons/screenshot-regular.png",
-            "sizes": "regular",
+            "sizes": "513x832",
             "type": "image/png"
         }
     ]
