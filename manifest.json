@@ -7,28 +7,27 @@
     "theme_color": "#007bff",
     "description": "Manage your chemical supplies efficiently.",
     "icons": [
-      {
-        "src": "icons/icon-192x192.png",
-        "sizes": "192x192",
-        "type": "image/png"
-      },
-      {
-        "src": "icons/icon-512x512.png",
-        "sizes": "512x512",
-        "type": "image/png"
-      }
+        {
+            "src": "icons/icon-192x192.png",
+            "sizes": "192x192",
+            "type": "image/png"
+        },
+        {
+            "src": "icons/icon-512x512.png",
+            "sizes": "512x512",
+            "type": "image/png"
+        }
     ],
     "screenshots": [
-      {
-        "src": "icons/screenshot-wide.png",
-        "sizes": "wide",
-        "type": "image/png"
-      },
-      {
-        "src": "icons/screenshot-regular.png",
-        "sizes": "regular",
-        "type": "image/png"
-      }
+        {
+            "src": "icons/screenshot-wide.png",
+            "sizes": "wide",
+            "type": "image/png"
+        },
+        {
+            "src": "icons/screenshot-regular.png",
+            "sizes": "regular",
+            "type": "image/png"
+        }
     ]
-  }
-  
+}
