@@ -170,7 +170,7 @@
                 body.appendChild(row);  
             });  
         }  
-
+        
 
 
         function updCell(event, rowIndex, colName) {
