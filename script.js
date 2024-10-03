@@ -170,10 +170,6 @@
                 body.appendChild(row);  
             });  
         }  
-        /*
-        Explanation:
-        This function, I made, to show the chemical records in a table format. It first clears the body of the table. Then, for each record, I create a new row. I check if the row should be highlighted based on user selection. It took me some time to figure out the event listeners logic, but it turned out to be useful.  
-        */ 
 
 
 
