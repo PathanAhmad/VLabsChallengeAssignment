@@ -175,6 +175,14 @@
         */ 
 
 
+        
+        function updCell(event, rowIndex, colName) {
+            const newValue = event.target.textContent.trim();
+            recs[rowIndex][colName] = newValue; // Update the 'recs' array with the new value
+            console.log(`Updated recs: ${JSON.stringify(recs[rowIndex])}`);
+        }
+
+
 
         function selChemRow(idx) {  
             const tickIcon = document.querySelectorAll("#chemical-table tbody td i")[idx];  
