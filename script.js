@@ -85,13 +85,13 @@
         function addNewChem() {  
             recs.push({  
                 id: recs.length + 1,  
-                chemicalName: "Unnamed Chem",  
-                vendor: "Unknown Vend",  
-                density: "Unknown",  
-                viscosity: "Unknown",  
-                packageType: "Unknown",  
-                packageSize: 0,  
-                unitType: "Unknown",  
+                chemicalName: "N/A",  
+                vendor: "N/A",  
+                density: "N/A",  
+                viscosity: "N/A",  
+                packageType: "N/A",  
+                packageSize: "N/A",  
+                unitType: "N/A",  
                 quantity: 0  
             });  
             showChemRecs();  
