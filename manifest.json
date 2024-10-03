@@ -17,6 +17,18 @@
         "sizes": "512x512",
         "type": "image/png"
       }
+    ],
+    "screenshots": [
+      {
+        "src": "icons/screenshot-wide.png",
+        "sizes": "wide",
+        "type": "image/png"
+      },
+      {
+        "src": "icons/screenshot-regular.png",
+        "sizes": "regular",
+        "type": "image/png"
+      }
     ]
   }
   
