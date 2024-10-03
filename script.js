@@ -23,6 +23,7 @@
  *  
  * 2. Table Display and Interaction  
  *    - showChemRecs():     Displays chemical records in the table.  
+ *    - updCell():          Makes sure the cell's updated value is reflected properly when saving.
  *    - selChemRow(idx):    Highlights or unhighlights a row when selected.  
  *  
  *  
@@ -175,10 +176,10 @@
         */ 
 
 
-        
+
         function updCell(event, rowIndex, colName) {
             const newValue = event.target.textContent.trim();
-            recs[rowIndex][colName] = newValue; // Update the 'recs' array with the new value
+            recs[rowIndex][colName] = newValue; 
             console.log(`Updated recs: ${JSON.stringify(recs[rowIndex])}`);
         }
 
